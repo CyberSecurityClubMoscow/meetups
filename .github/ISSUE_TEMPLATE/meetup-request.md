@@ -1,14 +1,15 @@
 ---
 name: Meetup Request
-about: Topic for the discussion
+about: Предложите тему для обсуждения
 title: "[MEETUP]"
 labels: ''
 assignees: ''
 
 ---
 
-Specify whatever you think matters:
-- keywords;
-- complexity;
-- your expectations;
-- ...
+*Укажите любую информацию, которую считаете релевантной.*
+*Например:*
+*- ключевые слова;*
+*- уровень сложности;*
+*- ваши ожидания от митапа;*
+*- ...*
