@@ -1,7 +1,7 @@
 ---
 name: Meetup Request
 about: Предложите тему для обсуждения
-title: "[MEETUP]"
+title: "[MEETUP] <тема обсуждения>"
 labels: ''
 assignees: ''
 
