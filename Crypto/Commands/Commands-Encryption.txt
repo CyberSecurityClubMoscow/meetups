@@ -1,0 +1,4 @@
+openssl enc -aes-128-cbc -in zerofile.bin -out zerofile.bin.enc.ecb
+
+openssl rsautl -encrypt -inkey pub-rsa.pem -pubin -in file.txt -out file.txt.enc.rsa
+openssl rsautl -decrypt -inkey priv-rsa.pem -out file.txt1 -in file.txt.enc.rsa

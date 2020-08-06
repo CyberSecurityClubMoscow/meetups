@@ -1,0 +1,8 @@
+echo TEXT | openssl dgst -sha512
+echo TEXT | openssl sha512
+openssl sha512 file.txt
+
+openssl passwd
+// (-1/-5/-6)
+// -salt
+// password hash format: $<Algo>$<Salt>$<SaltedHash>

@@ -1,0 +1,47 @@
+# Bytes
+# /dev/random & /dev/urandom
+head -c 24 /dev/random > key.bin
+head -c 24 /dev/urandom > key.bin
+
+# via openssl 
+openssl rand
+
+# Symmetric: 
+// OpenSSL uses passphrase during encryption to derive a key
+
+# Assymetric
+- RSA
+openssl genrsa -out rsa.pem 2048
+openssl rsa -in rsa-priv.pem -pubout -out rsa-pub.pem
+
+- DSA
+openssl dsaparam -out dsaparam.pem 2048
+openssl gendsa -out dsa-priv.pem dsaparam.pem 
+openssl dsa -in dsa-priv.pem -pubout -out dsa-pub.pem
+openssl dsa -in dsa-priv.pem -aes-128-cbc -out dsa-priv-enc.pem
+openssl dsa -in dsa-priv-enc.pem -pubout -out dsa-pub1.pem
+
+- EC
+openssl ecparam -list_curves
+openssl ecparam -name secp256k1 -out ecparam.pem
+openssl ecparam -genkey -out ec-priv.pem -in ecparam.pem 
+openssl ec -in ec-priv.pem -pubout -out ec-pub.pem
+
+- DH
+// 1st generates parameters and copies dhp.pem to the 2nd
+openssl genpkey -genparam -algorithm DH -out dhp.pem
+openssl pkeyparam -in dhp.pem -text
+
+// Each generates private key (do not exchange keys)
+openssl genpkey -paramfile dhp.pem -out dhkey1.pem
+openssl genpkey -paramfile dhp.pem -out dhkey2.pem
+openssl pkey -in dhkey1.pem -text -noout
+
+// Each generates public key from own private key (exchange public keys)
+openssl pkey -in dhkey1.pem -pubout -out dhpub1.pem
+openssl pkey -in dhkey2.pem -pubout -out dhpub2.pem
+openssl pkey -pubin -in dhpub1.pem -text
+
+// Each generates a secret from own private key and ther peer's public key
+openssl pkeyutl -derive -inkey dhkey1.pem -peerkey dhpub2.pem -out secret1.bin
+openssl pkeyutl -derive -inkey dhkey2.pem -peerkey dhpub1.pem -out secret2.bin

@@ -1,0 +1,14 @@
+# List subcommands (OpensSSL v1.0)
+openssl list-standard-commands
+openssl list-cipher-commands
+openssl list-cipher-algorithms
+openssl list-message-digest-commands
+openssl list-message-digest-algorithms
+
+# List subcommands (OpenSSL v1.1)
+openssl list [ standard-commands | digest-commands | cipher-commands | cipher-algorithms | digest-algorithms | public-key-algorithms]
+
+# man pages are very nice 
+man openssl
+man <subcommand>
+opensssl <command> -help

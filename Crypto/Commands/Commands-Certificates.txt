@@ -1,0 +1,16 @@
+# Self-signed certificate for Certification Authority
+openssl genrsa 4096 > CA.key
+openssl req -x509 -new -nodes -key CA.key -sha256 -days 2000 -out CA.crt
+openssl x509 -in CA.crt -text -noout
+
+# Client's key and Certificate Request
+openssl genrsa 4096 > client.key
+openssl req -new -nodes -key client.key -sha256 -days 730 -out Client.csr
+openssl req -in Client.csr -text -noout
+
+# CA signs client's CSR
+openssl x509 -req -days 360 -in Client.csr -CA CA.crt -CAkey CA.key -CAcreateserial -out Client.crt -sha256
+
+openssl x509 -in Client.crt -text -noout
+openssl req -in Client.ccs -text -noout
+	
