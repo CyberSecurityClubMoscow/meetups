@@ -1,0 +1,45 @@
+# Kerberos
+Very good. Sound not awesome but still clear 
+https://www.youtube.com/watch?v=2WqZSZ5t0qk
+
+
+# SAML
+https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language
+
+How it was before SAML
+
+https://www.youtube.com/watch?v=i8wFExDSZv0
+
+Federation, Configuration, Trust - very good
+https://www.youtube.com/watch?v=SvppXbpv-5k
+
+Technical Overview:
+https://wiki.oasis-open.org/security/Saml2TechOverview
+
+SAML SDK
+https://developers.onelogin.com
+
+
+
+Про OAuth и JWT гораздо больше ресурсов на русском языке
+
+# OAuth 
+- это передача прав доступа
+- регистрация - это побочный эффект. По факту создается еще один пароль для доступа к сервису.
+
+Отличное интро от DigitalOcean:
+https://www.digitalocean.com/community/tutorials/oauth-2-ru
+
+
+
+JWT
+https://www.youtube.com/watch?v=vQldMjSJ6-w
+https://www.youtube.com/watch?v=601CnGGp_MU
+https://www.youtube.com/watch?v=_BSag4ABBMY
+
+
+
+Access Controls
+MAC / DAC / Role-based / Rule-based
+https://www.techotopia.com/index.php/Mandatory,_Discretionary,_Role_and_Rule_Based_Access_Control
+
