@@ -1,0 +1,11 @@
+# Exec client
+for i in {0..1000}
+do 
+	echo "start $i" && ./client 10.0.10.3 $((5000+$i)) &  
+done
+
+# Take tcpdump
+tcpdump -i ens10 host 10.0.10.3 -w tcpdump.pcap
+
+# Study tcpdump
+tcpdump -n -r tcpdump.pcap | egrep '10.0.10.3.[0-9]+' | awk '{print $3" "$5" "$9}' | sed 's/ /./g' | sed 's/://'g | sed 's/,$//' | sort -t'.' -k10 -n | uniq | awk -F. '{print $11}' 
