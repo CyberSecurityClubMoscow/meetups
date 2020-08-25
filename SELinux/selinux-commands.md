@@ -2,7 +2,7 @@
 
 ## User/Group/Others - Read/Write/Execute
 
-chown, chmod,
+chown, chmod
 
 chown [-R] user:group file
 
@@ -13,7 +13,6 @@ chmod [-R] [ugo][+-=][rwx] file
 setfacl -m [ugw]:[user|group]:rwx file
 
 getfacl -d file
-
 
 ## Extended Attributes (security.selinux - this is where SELinux label is stored)
 
@@ -107,3 +106,6 @@ https://opensource.com/article/18/7/sysadmin-guide-selinux
 
 https://github.com/sjvermeu/small.coding
 
+## Comments
+
+https://github.com/CyberSecurityClubMoscow/meetups/issues/2
