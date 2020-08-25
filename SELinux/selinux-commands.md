@@ -51,6 +51,10 @@ chcon
 
 restorecon
 
+# -Z switch (LSM related info)
+
+id -Z, ls -Z, ps -Z, ...
+
 ## Information commands
 
 semodule -l
