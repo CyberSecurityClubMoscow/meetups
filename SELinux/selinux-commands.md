@@ -14,7 +14,8 @@ setfacl -m [ugw]:[user|group]:rwx file
 
 getfacl -d file
 
-## Extended Attributes (security.selinux - this is where SELinux label is stored)
+## Extended Attributes 
+(security.selinux - this is where SELinux label is stored)
 
 setfattr -n user.var -v value file
 
