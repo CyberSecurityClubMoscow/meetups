@@ -10,7 +10,7 @@ chmod [-R] [ugo][+-=][rwx] file
 
 ## ACL - easy way to fine tune access
 
-setfacl -m [ugw]:user:rwx file
+setfacl -m [ugw]:[user|group]:rwx file
 
 getfacl -d file
 
