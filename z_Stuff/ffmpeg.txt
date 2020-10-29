@@ -1,0 +1,4 @@
+# ffmpeg -ss 0:0:33 -to 0:55:23 -i src.mp4 -acodec copy -vcodec copy dst.mp4
+truncate video from 00:00:33 to 00:55:23
+
+https://ffmpeg.org/about.html
