@@ -8,4 +8,6 @@ NB: Начиная с мая 20го года мы проводим серию р
 
 [Telegram channel](https://t.me/cybersecurityclub)
 
+[Discord](https://discord.com/invite/hDDSQPfeRT)
+
 [Online Meetup Series 20/21](https://cybersecurityclub.moscow)
